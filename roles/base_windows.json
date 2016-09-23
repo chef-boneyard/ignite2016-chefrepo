@@ -1,0 +1,17 @@
+{
+  "name": "base_windows",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "audit": {
+      "collector": "chef-visibility",
+      "profiles": {
+        "base/windows": true
+      }
+    }
+  },
+  "description": "Base role for Windows machines",
+  "run_list": [
+    "recipe[audit]"
+  ]
+}
